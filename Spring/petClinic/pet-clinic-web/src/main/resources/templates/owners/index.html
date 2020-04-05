@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Owners</title>
 </head>
+
 <body>
-<h1>List of all owners in town</h1>
+<h1>List of all owners in the town</h1>
 <table>
     <thead>
     <tr>
@@ -15,6 +16,7 @@
     </tr>
     </thead>
     <tbody>
+    <!--/*@thymesVar id="owner" type="model.Owner"*/-->
     <tr th:each="owner : ${owners}">
         <td th:text="${owner.id}">1</td>
         <td th:text="${owner.firstName}">Joe</td>
