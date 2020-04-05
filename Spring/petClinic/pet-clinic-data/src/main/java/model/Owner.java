@@ -1,18 +1,14 @@
 package model;
 
-public class Owner { //extends Person
-//    Pet pet;
-//
-//    public Owner(Long id, String fs, String ln) {
-//        super(id, fs, ln);
-//    }
-//
-//    public void setPet(Pet pet){
-//        this.pet=pet;
-//    }
-//
-//    public Pet getPet(){
-//        return pet;
-//    }
+import java.util.HashSet;
+import java.util.Set;
+
+public class Owner extends Person{
+
+    private Set<Pet> pets;
+
+    public Set<Pet> getPets() {
+        return new HashSet<>(pets);
+    }
 
 }

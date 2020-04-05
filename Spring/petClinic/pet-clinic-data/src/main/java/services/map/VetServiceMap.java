@@ -1,4 +1,4 @@
 package services.map;
 
-public interface VetServiceMap {
+public class VetServiceMap {
 }
