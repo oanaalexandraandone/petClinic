@@ -2,13 +2,14 @@ package services.map;
 
 import model.Owner;
 import model.Pet;
+import org.springframework.stereotype.Service;
 import services.OwnerService;
 import services.PetService;
 import services.PetTypeService;
 
 import java.util.List;
 import java.util.Set;
-
+@Service
 public class OwnerServiceMap extends AbstractServiceMap<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
