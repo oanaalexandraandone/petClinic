@@ -1,25 +1,21 @@
 package bootstrap;
 
+import model.Owner;
+import model.Vet;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import services;
-
-
-
-
+import services.OwnerService;
+import services.VetService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
 
-
-
-
     private final OwnerService ownerService;
-    private final PetService petService;
+    private final VetService vetService;
 
-    public DataLoader() {
-        ownerService=new OwnerServiceMap();
-        petService=new PetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+       this.ownerService=ownerService;
+       this.vetService=vetService;
 
     }
 
@@ -60,6 +56,7 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet2); //John actually put vet1 here but I am sure that was a mistake he didnt catch
 
         System.out.println("Loaded Vets....");
-
-    }
 }
+    }
+//todo video 81, after anwer import correctly
+
